@@ -16,3 +16,4 @@ function RegistForm() {
 }
 
 export default RegistForm;
+
