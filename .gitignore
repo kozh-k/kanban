@@ -5,10 +5,10 @@ __pycache__/
 *.pyd
 
 # Среда виртуального окружения
-venv/
-env/
-.venv/
-.env/
+# venv/
+# env/
+# .venv/
+# .env/
 
 # Модули
 *.egg-info/
