@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/mlks/prgmng/Python/FastAPI/course2/venv"
+set -gx VIRTUAL_ENV "/home/mlks/prgmng/Python/FastAPI/PET/kanban/backend/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

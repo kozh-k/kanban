@@ -1,4 +1,4 @@
-#!/home/mlks/prgmng/Python/FastAPI/course2/venv/bin/python
+#!/home/mlks/prgmng/Python/FastAPI/PET/kanban/backend/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
