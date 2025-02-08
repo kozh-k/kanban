@@ -1,7 +1,7 @@
 from utils.repository import AbstractRepository
 from models.user import User
 from sqlalchemy.ext.asyncio import AsyncSession
-from schemas.user.user import UserRegistration, UserLogin,UserUpdate
+from schemas.user.user import UserRegistration, UserLogin, UserUpdate
 
 
 class UserService:
@@ -24,10 +24,10 @@ class UserService:
         result = await self.user_repo.delete(user_id, session)
         return result
 
-    async def update(self,schema: UserUpdate,session: AsyncSession,payload: dict):
-        
+    async def update(self, schema: UserUpdate, session: AsyncSession, payload: dict):
+
         user_dict = schema.model_dump()
-        result = await self.user_repo.update(user_dict,session,payload)
+        result = await self.user_repo.update(user_dict, session, payload)
         return result
 
     async def register_user(self, schema: UserRegistration, session: AsyncSession):

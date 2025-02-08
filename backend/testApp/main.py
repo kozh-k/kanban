@@ -10,8 +10,6 @@ from routers.login import router as login_router
 from fastapi.middleware.cors import CORSMiddleware
 
 
-
-
 app = FastAPI(
     # lifespan=lifespan,
     default_response_class=ORJSONResponse,
@@ -33,4 +31,3 @@ app.add_middleware(
 app.include_router(user_router)
 app.include_router(user_registration_router)
 app.include_router(login_router)
-

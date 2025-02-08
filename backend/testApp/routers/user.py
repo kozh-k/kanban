@@ -1,13 +1,13 @@
 # импорты TaskRepo и фастапи роутеров
 from testapp.dependencies import user_service
-from schemas.user.user import UserCreation, UserResponse,UserUpdate
+from schemas.user.user import UserCreation, UserResponse, UserUpdate
 from services.user import UserService
 from typing import Annotated, List
-from fastapi import Depends, APIRouter,Request,Response
+from fastapi import Depends, APIRouter, Request, Response
 from db.db import db_helper
 from sqlalchemy.ext.asyncio import AsyncSession
 from routers.login import check_jwt
-from auth.utils import decode_jwt,encode_jwt
+from auth.utils import decode_jwt, encode_jwt
 
 router = APIRouter(tags=["user_crud"], prefix="/user")
 
@@ -49,14 +49,14 @@ async def delete_user(
     result = await user_service.delete(user_id, session)
     return result
 
+
 @router.patch("/update")
 async def update_user(
-    session: Annotated[AsyncSession,Depends(db_helper.get_session)],
-    user_service: Annotated[UserService,Depends(user_service)],
+    session: Annotated[AsyncSession, Depends(db_helper.get_session)],
+    user_service: Annotated[UserService, Depends(user_service)],
     request: Request,
     schema: UserUpdate,
-)->UserResponse:
-    payload = decode_jwt(request.cookies.get('access_token'))
-    result = await user_service.update(schema,session,payload)
-    return result 
-    
+) -> UserResponse:
+    payload = decode_jwt(request.cookies.get("access_token"))
+    result = await user_service.update(schema, session, payload)
+    return result
