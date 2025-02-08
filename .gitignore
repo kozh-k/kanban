@@ -17,7 +17,7 @@ build/
 *.egg
 
 # Конфиденциальные файлы
-*.env
+# *.env
 
 # Логи
 *.log
@@ -29,11 +29,3 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
-
-config.py
-
-certs/
-private_key.pem    
-public_key.pem 
-TODO.md 
-# docker-compose.yml
